@@ -1,19 +1,26 @@
 import './App.css'
-import {products} from "./data/productsList.ts";
-import MyProduct from "./MyComponents/my-product/MyProduct.tsx";
 
 
 
+const coursesTitleArray = [
+  'JavaScript Complex',
+  'Java Complex',
+  'Python Complex',
+  'QA Complex',
+  'Fullstack',
+  'Frontend'
+];
 function App() {
 
 
   return (
-    <div className={'foo'}>
+    <>
+      <ul>
         {
-          products.map( (product, index ) => <MyProduct key={index} product = {product}/>
-         )
+        coursesTitleArray.map((value, index) => (<li key={index}> {value}</li>))
         }
-    </div>
+      </ul>
+    </>
   )
 }
 
