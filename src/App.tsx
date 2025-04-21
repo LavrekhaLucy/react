@@ -1,6 +1,6 @@
 import './App.css'
-import {products} from "./data/productsList.ts";
-import MyProduct from "./MyComponents/my-product/MyProduct.tsx";
+import {courses} from "./data/courseList.ts";
+import MyCourse from "./MyComponents/my-course/MyCourse.tsx";
 
 
 
@@ -8,9 +8,9 @@ function App() {
 
 
   return (
-    <div className={'foo'}>
+    <div className={'foobar'}>
         {
-          products.map( (product, index ) => <MyProduct key={index} product = {product}/>
+          courses.map( (course, index ) => <MyCourse key={index} course = {course}/>
          )
         }
     </div>
