@@ -1,9 +1,10 @@
+
 .foobar {
     text-align: center;
-}.foobar h2, p{
+}
+.foobar li{
     color: #FFFFFF;
     background: darkblue;
-}
-.foobar p{
-       font-size: 20px;
-}
+    font-size: 20px;
+ }
+

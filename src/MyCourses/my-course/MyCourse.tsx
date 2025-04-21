@@ -10,8 +10,8 @@ type MyPropsType = {
 const MyCourse:FC<MyPropsType> = ({course}) => {
     return (
         <div className='foobar'>
-            <h2>{course.title}</h2>
-            <p>{course.monthDuration}</p>
+            <li>{course.title} {course.monthDuration}</li>
+
         </div>
     );
 };

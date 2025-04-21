@@ -1,5 +1,4 @@
 import {FC, ReactNode} from "react";
-// import styles from "./MyComponent.module.css"
 
 type MyComponentPropsType = {
     title:string;
