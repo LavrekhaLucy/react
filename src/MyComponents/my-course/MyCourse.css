@@ -1,6 +1,13 @@
-.h2{
-    color:red;
-}
-.li{
-    word-spacing: 12px;
-}
+   div{
+      border-color: darkblue;
+   }
+
+    h2{
+        color:red;
+    }
+    h3{
+        color: blue;
+    }
+    p{
+        word-spacing: 12px;
+    }
