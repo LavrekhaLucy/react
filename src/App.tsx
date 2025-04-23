@@ -1,20 +1,24 @@
-import './App.css'
-import {products} from "./data/productsList.ts";
-import MyProduct from "./MyComponents/my-product/MyProduct.tsx";
+import {useState} from "react";
 
+const App = () => {
 
+    // eslint-disable-next-line prefer-const
+  let[ counter, setCounter] =useState<number>(0);
+  console.log("app");
+    return (
+        <div>
+            <h2>{counter}</h2>
+          <button onClick={()=>{
+             setCounter(++counter);
+          }}>increment</button>
 
-function App() {
+          <button onClick={()=> {
+              setCounter(prevState =>{
+              return --prevState;
+              });
+          }}>decrement</button>
+        </div>
+    );
+};
 
-
-  return (
-    <div className={'foo'}>
-        {
-          products.map( (product, index ) => <MyProduct key={index} product = {product}/>
-         )
-        }
-    </div>
-  )
-}
-
-export default App
+export default App;
