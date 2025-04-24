@@ -7,7 +7,7 @@ import{getUsers} from "../../servises/api.servise.ts";
  const UsersComponent = () => {
 
     const [users, setUsers] = useState<IUser[]>([]);
-
+    const [item, setItem]=useState<IUser | null>(null);
     useEffect(() => {
         getUsers()
             .then(response => {
@@ -18,12 +18,24 @@ import{getUsers} from "../../servises/api.servise.ts";
         }
     }, []);
 
-
+  const foo = (item:IUser) => {
+      setItem(item);
+  }
 
     return (
         <div>
             {
-                users.map( user  => <UserComponent key={user.id} item = {user}/>)
+                item && <div>
+                    {item.id}
+                    {item.name}
+                    {item.username}
+                    {item.email}
+                    {item.phone}
+                    {item.website}
+                 </div>
+            }
+            {
+                users.map( user  => <UserComponent  foo={foo} key={user.id} item = {user}/>)
             }
         </div>
     );
