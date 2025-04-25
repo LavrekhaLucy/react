@@ -1,0 +1,14 @@
+h3{
+    color: darkblue;
+}
+h4{
+    color: darkred;
+}
+p.status {
+    color: blue;
+}
+ p.description{
+    border: 2px solid darkgreen;
+     border-radius: 5px;
+     background: ivory;
+}
