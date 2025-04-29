@@ -6,7 +6,8 @@ import {Outlet} from "react-router-dom";
 
 const Layout = () => {
     return (
-       <div><Menu/>
+       <div>
+           <Menu/>
            <hr/>
            <Outlet/>
        </div>

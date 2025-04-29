@@ -10,7 +10,7 @@ const UserComponent:FC <UserPropsType> = ({item}) => {
     const navigate =useNavigate();
 
     const handleOnClick = () => {
-        navigate( 'details', {state:item});
+        navigate( 'posts/' + item.id, {state:item});
     };
     return (
         <div className='userdetails'>

@@ -5,13 +5,24 @@ import UsersPage from "../pages/UsersPage.tsx";
 import PostsPage from "../pages/PostsPage.tsx";
 import SingleUserDetailsPage from "../pages/SingleUserDetailsPage.tsx";
 
-export const routes =createBrowserRouter([
-    {path: '', element: <Layout/>, children:[
-            {path: '', element:<HomePage/> },
-            {path: 'users', element:<UsersPage/>},
+export const routes =createBrowserRouter (
+    [
+
+            {
+                path: '', element: <Layout/>, children:[
+
+            {index: true, element:<HomePage/> },
+
+            {path: 'users', element:<UsersPage/>, children:[
+                    {path:'posts/:userId', element:<PostsPage/>},
+                ]
+            },
+
             {path: 'users/details', element:<SingleUserDetailsPage/>},
+
             {path: 'posts', element:<PostsPage/>}
 
-        ]
+
+          ]
     }
 ]);
