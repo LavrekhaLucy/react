@@ -6,9 +6,12 @@ import ProductsPage from "../pages/ProductsPage.tsx";
 import UsersPage from "../pages/UsersPage.tsx";
 
 export const routes = createBrowserRouter( [
-        {path: '/',element: <HomePage/>},
-        {path:'comments', element:<CommentsPage/>},
-        {path:'posts', element:<PostsPage/>},
-        {path:'products', element:<ProductsPage/>},
-        {path:'users', element:<UsersPage/>},
+
+        {
+                path: '/', element: <HomePage/>, children: [
+                        {path: 'comments', element: <CommentsPage/>},
+                        {path: 'posts', element: <PostsPage/>},
+                        {path: 'products', element: <ProductsPage/>},
+                        {path: 'users', element: <UsersPage/>},]
+}
 ]);
