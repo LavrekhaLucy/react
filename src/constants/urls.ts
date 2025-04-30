@@ -19,19 +19,19 @@ export const urls = {
 
     }
 }
-const secondBaseUrl = 'https://dummyjson.com';
-export const urlTwo = {
+const urlDummyJSON = 'https://dummyjson.com';
+export const urlDJ = {
     users: {
-        allUsers: secondBaseUrl + '/users',
+        allUsers: urlDummyJSON + '/users',
         byId: (id: number) => {
-            return secondBaseUrl + '/' + id
+            return urlDummyJSON + '/' + id
         },
     },
 
     posts: {
-            allPosts: secondBaseUrl + '/posts',
-            byId: (id: number) => secondBaseUrl + '/' + id,
-            userSecondPostsById: (id: number) => secondBaseUrl + '/posts?userId=' + id
+            allPosts: urlDummyJSON + '/posts',
+            byId: (id: number) => urlDummyJSON + '/' + id,
+            userDummyJSONPostsById: (id: number) => urlDummyJSON + '/posts?userId=' + id
 
         }
 
