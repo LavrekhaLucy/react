@@ -29,10 +29,16 @@ export const urlDJ = {
     },
 
     posts: {
-            allPosts: urlDummyJSON + '/posts',
-            byId: (id: number) => urlDummyJSON + '/' + id,
-            userDummyJSONPostsById: (id: number) => urlDummyJSON + '/posts?userId=' + id
+        allPosts: urlDummyJSON + '/posts',
+        byId: (id: number) => urlDummyJSON + '/' + id,
+        userDummyJSONPostsById: (id: number) => urlDummyJSON + '/posts?userId=' + id
 
-        }
+        },
+    comments : {
+        allComments : urlDummyJSON + '/posts',
+        byId: (id: number) =>  urlDummyJSON + '/' + id,
+        userDummyJSONCommentsById: (id: number) => urlDummyJSON + '/comments?userId=' + id
+
+    }
 
 }

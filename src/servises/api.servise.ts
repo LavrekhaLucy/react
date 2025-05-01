@@ -4,6 +4,7 @@
     import {IComment} from "../model/IComment.ts";
     import {IUserDummyJson} from "../model/IUserDummyjson.ts";
     import {IPostDummyJson} from "../model/IPostDummyjson.ts";
+    import {ICommentDummyjson} from "../model/ICommentDummyjson.ts";
 
     export const userService  = {
         getUsers: async ():Promise<IUser[]> =>{
@@ -28,16 +29,26 @@
 
         }
     }
+
     export const userServiceDummyJSON  = {
-        getUsers: async ():Promise<IUserDummyJson[]> =>{
+        getUsersDJ: async ():Promise<IUserDummyJson[]> =>{
             return await fetch(urlDJ.users.allUsers)
                 .then(value =>value.json())
 
         }
     }
+
     export const postServiceDummyJSON = {
-        getAllPostsOfUserById: async (id:number):Promise<IPostDummyJson[]> =>{
+        getAllPostsOfUserByIdDJ: async (id:number):Promise<IPostDummyJson[]> =>{
             return await fetch(urlDJ.posts.userDummyJSONPostsById(id))
+                .then(value => value.json())
+
+        }
+    }
+
+    export const commentServiceDummyJSON  = {
+        getAllCommentsOfUserByIdDJ: async (id:number):Promise<ICommentDummyjson[]> =>{
+            return await fetch(urlDJ.comments.userDummyJSONCommentsById(id))
                 .then(value => value.json())
 
         }

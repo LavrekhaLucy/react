@@ -11,13 +11,6 @@ const Menu = () => {
                 <li><Link to={'comments'}> Comments </Link></li>
 
             </ul>
-            <ul>
-
-                <li><Link to={'usersDJ'}> UsersDummyJSON </Link></li>
-                <li><Link to={'postsDJ'}> PostsDummyJSON </Link></li>
-
-
-            </ul>
         </div>
     );
 };
