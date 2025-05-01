@@ -2,14 +2,15 @@ import {Outlet} from "react-router-dom";
 import Menu from "../components/menu/Menu.tsx";
 
 
-const Layout = () => {
+
+const DummyJsonLayout = () => {
     return (
         <div>
+            <h2>DummyJson</h2>
             <Menu/>
-            <hr/>
             <Outlet/>
         </div>
     );
 };
 
-export default Layout;
+export default DummyJsonLayout;

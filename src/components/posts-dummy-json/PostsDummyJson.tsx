@@ -1,9 +1,8 @@
 
-
 const PostsDummyJson = () => {
     return (
         <div>
-            PostsDummyJson
+            <h2>PostsDummyJson</h2>
         </div>
     );
 };

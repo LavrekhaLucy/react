@@ -3,7 +3,7 @@
 const UsersDummyJson = () => {
     return (
         <div>
-            UsersDummyJson
+            <h2>UsersDummyJson</h2>
         </div>
     );
 };

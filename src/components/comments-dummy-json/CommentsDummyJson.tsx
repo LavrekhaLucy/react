@@ -1,10 +1,9 @@
 
-
-
 const CommentsDummyJson = () => {
     return (
         <div>
-            CommentsDummyJson
+
+            <h2>CommentsDummyJson</h2>
 
         </div>
     );

@@ -4,6 +4,7 @@ import "./Menu.css"
 const Menu = () => {
     return (
         <div>
+
             <ul>
                 <li><Link to={'/'}>Home </Link></li>
                 <li><Link to={'users'}> Users </Link></li>
@@ -11,6 +12,9 @@ const Menu = () => {
                 <li><Link to={'comments'}> Comments </Link></li>
 
             </ul>
+
+            <hr/>
+
         </div>
     );
 };
