@@ -1,13 +1,13 @@
 import {IBaseResponseModel} from "../../models/IBaseResponseModel.ts";
 import {IUser} from "../../models/IUser.ts";
-import {getAll} from "../../servises/api.servise.ts";
 import {useEffect, useState} from "react";
+import {getUsers} from "../../servises/api.servise.ts";
 
 
 const UsersComponent = () => {
     const [users, setUsers] = useState<IUser[]>([]);
     useEffect(() => {
-        getAll <IBaseResponseModel & {users:IUser[]}> ()
+        getUsers <IBaseResponseModel & {users:IUser[]}> ()
 
             .then(({users}) => setUsers(users));
 
