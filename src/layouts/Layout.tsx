@@ -1,4 +1,5 @@
 import {Link, Outlet} from "react-router-dom";
+import Menu from "../components/menu/Menu.tsx";
 
 
 
@@ -7,17 +8,16 @@ const Layout = () => {
     return (
         <div>
 
-                <h1 style={{ display: 'flex',justifyContent:'center' }}>Home navigation</h1>
+            <Menu/>
 
-            <div  style={{ display: 'flex',justifyContent:'center', gap: '100px', fontSize:'26px' }}>
+            <div style={{ display: "flex", justifyContent:'center', gap: "200px", fontSize:'25px' }}>
 
                 <Link to='JsonPlaceholder'>JsonPlaceholder</Link>
-                <Link to='DummyJson'>DummyJson</Link>
-
-            </div>
+                <Link to='DummyJson'>DummyJson</Link></div>
 
                 <hr />
                 <Outlet />
+
         </div>
     );
 };

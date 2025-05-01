@@ -1,7 +1,8 @@
 ul{
     list-style-type: none;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     padding: 15px;
+    font-size: 25px;
 
 }
