@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {IBaseResponseModel} from "../../models/IBaseResponseModel.ts";
 import {IPost} from "../../models/IPost.ts";
 import {getPosts} from "../../servises/api.servise.ts";
+import {PostComponent} from "../post/PostComponent.tsx";
 
 
 const PostsComponent = () => {
@@ -18,7 +19,7 @@ const PostsComponent = () => {
     return (
         <div>
             {
-                posts.map((value:IPost) => <div key={value.id}> {value.title} </div>)
+                posts.map((value:IPost) => <PostComponent key={value.id} value={value}/>  )
             }
         </div>
     );

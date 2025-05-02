@@ -1,15 +1,13 @@
-import {FC} from "react";
 import {IPost} from "../../models/IPost.ts";
 
-type PostComponentProps = {
-    post: IPost[];
+
+interface PostComponentProp {
+    value: IPost,
+
 }
-const PostComponent:FC<PostComponentProps> = () => {
-    return (
-        <div>
 
-        </div>
-    );
-};
-
-export default PostComponent;
+export const PostComponent = ({value}: PostComponentProp) => {
+    return <div>
+        {value.title}
+    </div>;
+}
