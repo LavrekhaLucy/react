@@ -1,12 +1,10 @@
 export interface IProduct {
+    id: number;
     title: string;
     price: number;
-    image: string;
+    quantity: number;
+    total: number;
+    discountPercentage: number;
+    discountedTotal: number;
+    thumbnail: string;
 }
-
-
-
-
-
-
-
