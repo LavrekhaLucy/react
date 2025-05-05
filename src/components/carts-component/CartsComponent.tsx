@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import {ICart} from "../../models/ICart.ts";
 import {ICartResponseModel} from "../../models/ICartResponseModel.ts";
 import CartComponent from "./CartComponent.tsx";
+import {cartService} from "../../services/api.service.ts";
 
 
 const CartsComponent = () => {
@@ -10,10 +11,11 @@ const CartsComponent = () => {
     const [carts,setCarts]= useState<ICart[]>([]);
 
     useEffect(() => {
-        fetch('https://dummyjson.com/carts/user'+id)
-            .then(value => value.json())
-            .then(({carts}:ICartResponseModel)=> setCarts(carts));
-    },[id])
+      if(id){
+          cartService.getCartOfUser(id)
+              .then(({carts}:ICartResponseModel)=> setCarts(carts));
+      }
+},[id])
 
 
 
@@ -22,7 +24,6 @@ const CartsComponent = () => {
         <div>
             {
                 carts.map(cart => (<CartComponent  key={cart.id} cart={cart}/>
-
                 ))
             }
         </div>
