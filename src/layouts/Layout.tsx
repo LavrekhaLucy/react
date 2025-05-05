@@ -6,7 +6,7 @@ const Layout = () => {
     return (
        
         <div>
-            <p>Layout</p>
+            <hr/>
             <Menu/>
             <hr/>
             <Outlet/>
