@@ -1,17 +1,15 @@
-import { Outlet} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 
 const PostsChildrenLayout = () => {
     return (
         <div>
-            <div>
-                <h2>Users JsonPlaceholder </h2>
+            <div style={{ display: "flex", justifyContent:'center', gap: "200px", fontSize:'25px' }}>
 
+                <Link to={'JsonPlaceholder'}>JsonPlaceholder</Link>
+                <Link to={'posts/DummyJson'}>DummyJson</Link>
             </div>
-            <div>
-                <h2>Users DummyJson</h2>
 
-            </div>
 
                 <Outlet/>
 

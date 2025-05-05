@@ -1,4 +1,4 @@
-import CommentsComponent from "../components/comments/CommentsComponent.tsx";
+import CommentsComponent from "../components/json-placeholder-components/comments/CommentsComponent.tsx";
 
 
 const CommentsJsonPage = () => {

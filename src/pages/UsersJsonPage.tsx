@@ -1,4 +1,4 @@
-import UsersComponent from "../components/users/UsersComponent.tsx";
+import UsersComponent from "../components/json-placeholder-components/users/UsersComponent.tsx";
 
 
 const UsersJsonPage = () => {

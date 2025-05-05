@@ -14,11 +14,10 @@ import CommentsChildrenLayout from "../layouts/CommentsChildrenLayout.tsx";
 
 export const routes = createBrowserRouter([
     {
-        path: '', element: <Layout/>,
+        path: '/', element: <Layout/>,
         children: [
 
             {path:'users', element:<UsersChildrenLayout/>, children:[
-
                     {path: 'JsonPlaceholder', element:<UsersJsonPage/>},
                     {path:'DummyJson', element: <UsersDummyPage/>}
                 ]},
@@ -34,3 +33,4 @@ export const routes = createBrowserRouter([
     }
 
 ]);
+

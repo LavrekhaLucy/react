@@ -1,4 +1,4 @@
-import UsersDummyJson from "../components/users-dummy-json/UsersDummyJson.tsx";
+import UsersDummyJson from "../components/dummy-json-components/users-dummy-json/UsersDummyJson.tsx";
 
 
 const UsersDummyPage = () => {

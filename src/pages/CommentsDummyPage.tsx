@@ -1,4 +1,4 @@
-import CommentsDummyJson from "../components/comments-dummy-json/CommentsDummyJson.tsx";
+import CommentsDummyJson from "../components/dummy-json-components/comments-dummy-json/CommentsDummyJson.tsx";
 
 
 const CommentsDummyPage = () => {
