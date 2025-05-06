@@ -1,4 +1,4 @@
-import {IPost} from "../../../model/IPost.ts";
+import {IPost} from "../../../model/model-json-placeholder/IPost.ts";
 import {FC} from "react";
 
 

@@ -1,8 +1,15 @@
-    import { urlJsonPlaceholder} from "../constants/urls.ts";
-    import {IUser} from "../model/IUser.ts";
-    import {IPost} from "../model/IPost.ts";
-    import {IComment} from "../model/IComment.ts";
+    import {urlDummyJson, urlJsonPlaceholder} from "../constants/urls.ts";
+    import {IUser} from "../model/model-json-placeholder/IUser.ts";
+    import {IPost} from "../model/model-json-placeholder/IPost.ts";
+    import {IComment} from "../model/model-json-placeholder/IComment.ts";
+    import {IUserResponseModel} from "../model/model-dummy-json/IUserResponseModel.ts";
+    import {IUserDummyJson} from "../model/model-dummy-json/IUserDummyjson.ts";
+    import {IPostDummyJson} from "../model/model-dummy-json/IPostDummyjson.ts";
+    import {IPostResponseModel} from "../model/model-dummy-json/IPostResponseModel.ts";
+    import {ICommentResponseModel} from "../model/model-dummy-json/ICommentResponseModel.ts";
+    import {ICommentDummyJson} from "../model/model-dummy-json/ICommentDummyjson.ts";
 
+    // api.JsonPlaceholder//
 
     export const userService  = {
         getAllUsers: async ():Promise<IUser[]> =>{
@@ -12,7 +19,6 @@
         }
     }
 
-
     export const postService  = {
         getAllPosts: async ():Promise<IPost[]> =>{
             return await fetch(urlJsonPlaceholder.posts.allPosts)
@@ -20,8 +26,6 @@
 
         }
     }
-
-
 
     export const commentService  = {
         getAllComments: async ():Promise<IComment[]> =>{
@@ -32,32 +36,28 @@
     }
 
 
+    // api.DummyJson//
 
+    export const userServiceDummyJson  = {
+        getUsersDummyJson: async ():Promise<IUserResponseModel & {users:IUserDummyJson[]} > =>{
+            return await fetch(urlDummyJson.users.allUsers)
+                .then(value =>value.json())
 
+        }
+    }
 
+    export const postServiceDummyJSON = {
+        getAllPosts: async ():Promise<IPostResponseModel & {posts:IPostDummyJson[]}> =>{
+            return await fetch(urlDummyJson.posts.allPosts)
+                .then(value => value.json())
 
+        }
+    }
 
-    //
-    // export const userServiceDummyJSON  = {
-    //     getUsersDJ: async ():Promise<IUserDummyJson[]> =>{
-    //         return await fetch(urlDJ.users.allUsers)
-    //             .then(value =>value.json())
-    //
-    //     }
-    // }
-    //
-    // export const postServiceDummyJSON = {
-    //     getAllPostsOfUserByIdDJ: async (id:number):Promise<IPostDummyJson[]> =>{
-    //         return await fetch(urlDJ.posts.userDummyJSONPostsById(id))
-    //             .then(value => value.json())
-    //
-    //     }
-    // }
-    //
-    // export const commentServiceDummyJSON  = {
-    //     getAllCommentsOfUserByIdDJ: async (id:number):Promise<ICommentDummyjson[]> =>{
-    //         return await fetch(urlDJ.comments.userDummyJSONCommentsById(id))
-    //             .then(value => value.json())
-    //
-    //     }
-    // }
+    export const commentServiceDummyJSON  = {
+        getAllComments: async ():Promise<ICommentResponseModel & {comments:ICommentDummyJson[]}> =>{
+            return await fetch(urlDummyJson.comments.allComments)
+                .then(value => value.json())
+
+        }
+    }

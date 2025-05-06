@@ -7,7 +7,7 @@ const PostsChildrenLayout = () => {
             <div style={{ display: "flex", justifyContent:'center', gap: "200px", fontSize:'25px' }}>
 
                 <Link to={'JsonPlaceholder'}>JsonPlaceholder</Link>
-                <Link to={'posts/DummyJson'}>DummyJson</Link>
+                <Link to={'DummyJson'}>DummyJson</Link>
             </div>
 
 

@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {commentService} from "../../../servises/api.servise.ts";
-import {IComment} from "../../../model/IComment.ts";
+import {IComment} from "../../../model/model-json-placeholder/IComment.ts";
 import CommentComponent from "../comment-component/CommentComponent.tsx";
 
 const CommentsComponent = () => {

@@ -10,7 +10,6 @@ const CommentsChildrenLayout = () => {
             </div>
 
 
-
             <Outlet/>
         </div>
     );

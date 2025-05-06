@@ -1,4 +1,4 @@
-import {IUser} from "../../../model/IUser.ts";
+import {IUser} from "../../../model/model-json-placeholder/IUser.ts";
 import {FC} from "react";
 
 

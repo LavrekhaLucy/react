@@ -1,5 +1,5 @@
 import {FC} from "react";
-import {IComment} from "../../../model/IComment.ts";
+import {IComment} from "../../../model/model-json-placeholder/IComment.ts";
 
 type CommentTypeProps = {
     value: IComment

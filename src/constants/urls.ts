@@ -1,4 +1,4 @@
-const baseUrl = 'https://jsonplaceholder.typicode.com'
+const baseUrl = import.meta.env.VITE_BASE_URL_JSONPLACEHOLDER;
 export const urlJsonPlaceholder = {
     users:{
         allUsers : baseUrl+'/users',
@@ -20,13 +20,7 @@ export const urlJsonPlaceholder = {
     }
 }
 
-
-
-
-
-
-
-const urlDummyJSON = 'https://dummyjson.com';
+const urlDummyJSON = import.meta.env.VITE_BASE_URL_DUMMYJSON;
 export const urlDummyJson= {
     users: {
         allUsers: urlDummyJSON + '/users',
@@ -42,7 +36,7 @@ export const urlDummyJson= {
 
         },
     comments : {
-        allComments : urlDummyJSON + '/posts',
+        allComments : urlDummyJSON + '/comments',
         byId: (id: number) =>  urlDummyJSON + '/' + id,
         userDummyJSONCommentsById: (id: number) => urlDummyJSON + '/comments?userId=' + id
 

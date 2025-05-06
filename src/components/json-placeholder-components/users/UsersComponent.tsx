@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import {userService} from "../../../servises/api.servise.ts";
-import {IUser} from "../../../model/IUser.ts";
+import {IUser} from "../../../model/model-json-placeholder/IUser.ts";
 import UserComponent from "../user-component/UserComponent.tsx";
 
 const UsersComponent = () => {

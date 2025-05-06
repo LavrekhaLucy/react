@@ -1,6 +1,6 @@
 import { useEffect, useState} from "react";
 import {postService} from "../../../servises/api.servise.ts";
-import {IPost} from "../../../model/IPost.ts";
+import {IPost} from "../../../model/model-json-placeholder/IPost.ts";
 import PostComponent from "../post-component/PostComponent.tsx";
 
 
