@@ -12,7 +12,7 @@ const UsersComponent = () => {
             .then((allUsers) =>
             setUsers(allUsers));
 
-    }, [users]);
+    }, []);
 
     return (
         <div>
