@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {getAllUsers} from "../../services/api.service.ts";
-import {useSearchParams} from "react-router-dom";
+import { useSearchParams} from "react-router-dom";
 import {IUser} from "../../model/IUser.ts";
 import UserComponent from "../user-component/UserComponent.tsx";
 
@@ -15,6 +15,7 @@ const SomeComponent = () => {
 
         getAllUsers(query.get('pg') || '1').then(value =>
         setUsers(value.data));
+
     }, [query]);
     return (
         <div>
