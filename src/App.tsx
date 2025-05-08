@@ -1,20 +1,11 @@
-import './App.css'
-import {products} from "./data/productsList.ts";
-import MyProduct from "./MyComponents/my-product/MyProduct.tsx";
 
 
+const App = () => {
+    return (
+        <div>
 
-function App() {
+        </div>
+    );
+};
 
-
-  return (
-    <div className={'foo'}>
-        {
-          products.map( (product, index ) => <MyProduct key={index} product = {product}/>
-         )
-        }
-    </div>
-  )
-}
-
-export default App
+export default App;
