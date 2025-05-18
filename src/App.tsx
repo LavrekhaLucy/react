@@ -1,18 +1,29 @@
 import './App.css'
-import {products} from "./data/productsList.ts";
-import MyProduct from "./MyComponents/my-product/MyProduct.tsx";
+import {MyContext} from "./context/MyContextProvider.tsx";
+import {useState} from "react";
+import {A} from "./components/A.tsx";
+import {B} from "./components/B.tsx";
+
 
 
 
 function App() {
 
-
+    const [themeColor, setThemeColor] = useState<string>('light')
   return (
-    <div className={'foo'}>
-        {
-          products.map( (product, index ) => <MyProduct key={index} product = {product}/>
-         )
-        }
+    <div >
+        <MyContext.Provider value={{
+            theme:themeColor,
+            changeTheme:(themeValue:string) =>{
+                setThemeColor(themeValue)
+            }
+        }}>
+
+            <A/>
+            <B/>
+
+        </MyContext.Provider>
+
     </div>
   )
 }
