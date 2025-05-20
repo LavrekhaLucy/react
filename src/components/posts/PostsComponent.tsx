@@ -1,33 +1,26 @@
-import {IPost} from "../../models/IPost.ts";
-import {FC, useEffect, useState} from "react";
-import {postService} from "../../services/api.service.ts";
+import {useEffect} from "react";
+import {useAppSelector} from "../../redux/hooks/useAppSelector.tsx";
+import {useAppDispatch} from "../../redux/hooks/useAppDispatch.tsx";
+import { postSliceActions} from "../../redux/slices/postSlice.ts";
 
 
+const PostsComponent = () => {
 
-type PostsTypeProps = {
-    userId:string;
-}
-const PostsComponent:FC <PostsTypeProps> = ({userId}) => {
 
-    const [posts,setPosts] = useState<IPost[]>([]);
+    const {posts}= useAppSelector(({postSlice})=> postSlice);
+    const dispatch = useAppDispatch();
 
-    useEffect(() => {
-        if (userId) {
-            console.log("exist", userId);
-            postService
-                .getAllPostsOfUserById(+userId)
-                .then(value=> {
-                    console.log(value);
-                setPosts(value);
-            });
-        }
-    },[userId]);
+    useEffect(()=>{
+        dispatch(postSliceActions.loadPosts());
+
+    },[]);
 
     return (
-
         <div>
             {
-                posts.map(value => <div>{value.title}</div>)
+                posts.map((post) => {
+                    return <div key={post.id}>{post.id}: {post.title}</div>
+                })
             }
         </div>
     );

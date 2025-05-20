@@ -9,12 +9,16 @@ export const userService  = {
 
     }
 }
-//     getUser: async ():Promise<IUser[]> =>{
-//         return await fetch(urls.users.buId(id))
+//    export const userService={
+//        getUsers:  async (_, thunkAPI) =>{
+//         return await fetch(urls.users.byId)
 //             .then((value) =>value.json())
 //
 //     }
 // }
+//
+//
+
 
 
 export const postService  = {

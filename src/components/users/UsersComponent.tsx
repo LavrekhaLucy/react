@@ -1,20 +1,26 @@
-import {useEffect, useState} from "react";
-import {IUser} from "../../models/IUser.ts";
-import UserComponent from "../user/UserComponent.tsx";
-import {userService} from "../../services/api.service.ts";
+import {useEffect} from "react";
+import {useAppSelector} from "../../redux/hooks/useAppSelector.tsx";
+import {useAppDispatch} from "../../redux/hooks/useAppDispatch.tsx";
+import {userSliceActions} from "../../redux/slices/userSlice.ts";
 
 
 const UsersComponent = () => {
-     const [users, setUsers] = useState<IUser[]>([]);
+
+     const {users}= useAppSelector(({userSlice})=>userSlice);
+     const dispatch = useAppDispatch();
+
      useEffect(()=>{
-         userService.getUsers().then ( (allUsers)=>{
-             setUsers(allUsers);
-         })
-     },[users])
+      dispatch(userSliceActions.loadUsers());
+
+     },[]);
 
     return (
         <div>
-            {users.map ( user => <UserComponent item={user} key={user.id} /> )}
+            {
+                users.map((user) => {
+                    return <div key={user.id}>{user.id}: {user.name}</div>
+                })
+            }
         </div>
     );
 };
